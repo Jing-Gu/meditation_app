@@ -1,7 +1,7 @@
 const song = document.querySelector("audio.song");
 const play = document.querySelector(".play");
 const outline = document.querySelector(".moving-outline circle");
-const video = document.querySelector(".video-container video");
+// const video = document.querySelector(".video-container video");
 
 const svgMeditation = document.querySelector(".meditation");
 
@@ -26,7 +26,7 @@ outline.style.strokeDashoffset = outlineLength;
 soundBtns.forEach(sound => {
   sound.addEventListener("click", function() {
     song.src = this.getAttribute("data-sound");
-    video.src = this.getAttribute("data-video");
+    // video.src = this.getAttribute("data-video");
     checkStatus(song);
   });
 });
@@ -40,12 +40,12 @@ play.addEventListener("click", () => {
 function checkStatus() {
   if (song.paused) {
     song.play();
-    video.play();
+    // video.play();
     play.src = "svg/pause.svg";
     play.style.transform = "translateX(-2%)";
   } else {
     song.pause();
-    video.pause();
+    // video.pause();
     play.src = "svg/play.svg";
     play.style.transform = "translateX(10%)";
   }
@@ -71,7 +71,7 @@ song.ontimeupdate = () => {
   //reset when the song finishes
   if (currentTime >= listenDuration) {
     song.pause();
-    video.pause();
+    // video.pause();
     song.currentTime = 0;
     play.src = "svg/play.svg";
     play.style.transform = "translateX(10%)";

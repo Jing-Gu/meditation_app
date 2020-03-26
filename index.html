@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meditation App</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/gif" href="svg/favicon.gif" />
   </head>
   <body>
     <div class="app">
       <!-- set default video as bg -->
-      <div class="video-container">
+      <!-- <div class="video-container">
         <video loop>
           <source src="video/rain.mp4" type="video/mp4" />
         </video>
-      </div>
+      </div> -->
 
       <!-- left - time select  -->
       <section class="left">
         <div class="time-select">
-          <button data-time="120">2 minutes</button>
-          <button data-time="300">5 minutes</button>
-          <button data-time="600">10 minutes</button>
+          <button data-time="120">2 mins</button>
+          <button data-time="300">5 mins</button>
+          <button data-time="600">10 mins</button>
         </div>
       </section>
       <!-- end of section left -->
@@ -153,18 +154,28 @@
       <!-- right - sound picker & controller  -->
       <section class="right">
         <div class="sound-picker">
-          <button data-sound="sound/rain.mp3" data-video="video/rain.mp4">
-            <img src="svg/rain.svg" alt="rain" />
+          <button data-sound="sound/meditation.mp3" data-video="video/rain.mp4">
+            <img src="svg/sound-picker-btn/meditation.svg" alt="" />
           </button>
 
-          <button data-sound="sound/beach.mp3" data-video="video/beach.mp4">
-            <img src="svg/beach.svg" alt="beach" />
+          <button
+            data-sound="sound/calming-guitar.mp3"
+            data-video="video/beach.mp4"
+          >
+            <img src="svg/sound-picker-btn/relax.svg" alt="" />
+          </button>
+
+          <button
+            data-sound="sound/inspiration.mp3"
+            data-video="video/beach.mp4"
+          >
+            <img src="svg/sound-picker-btn/inspire.svg" alt="" />
           </button>
         </div>
 
         <div class="player-container">
           <audio class="song">
-            <source src="sound/lofi1.m4a" />
+            <source src="sound/quite-time.mp3" type="audio/mp3" />
           </audio>
           <div class="player-center">
             <div class="play-pause-circle">
@@ -185,21 +196,33 @@
                   stroke-width="20"
                 />
               </svg>
+
               <svg
                 class="moving-outline"
-                width="453"
-                height="453"
                 viewBox="0 0 453 453"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                style="enable-background:new 0 0 453 453;"
+                xml:space="preserve"
               >
-                <circle
-                  cx="226.5"
-                  cy="226.5"
-                  r="216.5"
-                  stroke="#018EBA"
-                  stroke-width="20"
-                />
+                <style type="text/css">
+                  .st0 {
+                    fill: none;
+                    stroke: url(#SVGID_1_);
+                    stroke-width: 20;
+                  }
+                </style>
+                <linearGradient
+                  id="SVGID_1_"
+                  gradientUnits="userSpaceOnUse"
+                  x1="66.3403"
+                  y1="66.3403"
+                  x2="386.6597"
+                  y2="386.6597"
+                >
+                  <stop offset="0" style="stop-color:#BAA7D6" />
+                  <stop offset="0.3531" style="stop-color:#ADA4D5" />
+                  <stop offset="1" style="stop-color:#8A9DD2" />
+                </linearGradient>
+                <circle class="st0" cx="226.5" cy="226.5" r="216.5" />
               </svg>
             </div>
           </div>
